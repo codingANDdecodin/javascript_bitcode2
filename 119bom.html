@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>location object</h1>
+    <script>
+        var result;
+        //u can set also and see in url
+        //window.location.href='httt://www.myntra.com/home-furnishing-menu/f=categries%3ABedssheet';
+
+
+        result=window.location.host;//it include port if exits
+        result=window.location.host;
+        result=window.location.host.href;
+        result=window.location.host.pathname;
+        result=window.location.host.port;
+        result=window.location.host.protocl;
+        console.log(result);
+        
+        window.location.reload();
+        window.location.assign('https://wwww.myntra.com/home-furnishing-menu?/f=categories%3ABedsheets');
+        window.location.replace('htttp//google.com');
+    </script>
+</body>
+</html>

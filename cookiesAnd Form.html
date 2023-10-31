@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action=""  name="myform">
+        <fieldset style="width: 500px; text-align: center;">
+            <legend>myform</legend>
+            <label>name:</label>
+            <input type="text" placeholder="enter name" name="name"><br/><br/>
+            <label>surname:</label>
+            <input type="text" placeholder="enter surname" name="surname"/><br/><br/>
+            <label>address:</label>
+            <input type="text" placeholder="enter address" name="address"><br/><br/>
+            <label for="male">male:</label>
+            <input type="radio" name="gender" value="male" />
+            <label for="female" >female:</label>
+            <input type="radio" name="gender" value="female"/><br/><br/>
+
+            <label>skill:</label>
+            <select name="skills">
+                <optgroup label="soft">
+                    <option value="motivation">motivating</option>
+                    <option value="creativity">creative thinking</option>
+                    <option value="decision making">decision making</option>
+                </optgroup>
+                <optgroup label="hard skill">
+                    <option value="c++">c++</option>
+                    <option value="java">java</option>
+                    <option value="python">python</option>
+                </optgroup>
+            </select><br/><br/>
+
+            <!-- <button id="setC" onclick="setCookieHandler()">submit cookies</button>
+            <button id="getC">get cookies</button> -->
+            <input type="button" value="submit cookies" onclick="setCookieHandler()" id="setC"/>
+            <input type="button" value="get cookies" onclick="getCookieHandler()" id="getC"/>
+
+            
+        </fieldset>
+    </form>
+    <script>
+      let setCookieHandler=()=>{
+
+        document.cookie="myname="+myform.name.value+";max-age="+60*60*24;
+        document.cookie="mysurname="+myform.surname.value+";max-age="+60*60*24;
+        document.cookie="address="+myform.address.value+";max-age="+60*60*24;
+        document.cookie="gender="+myform.gender.value+";max-age="+60*60*24;
+        document.cookie="skills="+myform.skills.value+";max-age="+60*60*24;
+
+        myform.name.value='';
+        myform.surname.value='';
+        myform.address.value='';
+        myform.gender.cheaked=false;
+        myform.skills.value='';
+      }
+      let getCookieHandler=()=>{
+        var arryData=document.cookie.split(";");
+        for(let i=0;i<arryData.length;i++){
+           var valueArray=arryData[i].split("=");
+           if(valueArray[0].trim()=='myname'){
+            myform.name.value=valueArray[1];
+           }else if(valueArray[0].trim()=='mysurname'){
+            myform.surname.value=valueArray[1];
+           }else if(valueArray[0].trim()=='address'){
+            myform.address.value=valueArray[1];
+           }else if(valueArray[0].trim()=='gender'){
+            myform.gender.value=valueArray[1]
+           }else if(valueArray[0].trim()=='skills'){
+            myform.skills.value=valueArray[1]
+
+           }
+        }
+        
+        
+      }
+    </script>
+</body>
+</html>

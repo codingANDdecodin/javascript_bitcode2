@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //appcodeName return the code name of th brouser
+        document.write("brouser code name: "+navigator.appCodeName);
+
+        //aapname return name of the brouser
+        document.write("<br>");
+        document.write("brouser name: "+navigator.appName);
+
+        //aapversion return current  version information
+        document.write("<br>");
+        document.write("brouser appversion :"+navigator.appVersion);
+
+        //cookieEnable determine wheather cookies are enable in your brouser
+        document.write("<br>");
+        document.write("brouser cookieEnable: "+navigator.cookieEnabled);
+
+        //language return languae of your brouser
+        document.write("<br>");
+        document.write("brouser language: "+navigator.language);
+
+        //platform return which platform brousesr is compiled
+        document.write("<br>");
+        document.write("brouser platform: "+navigator.platform);
+
+        //detect plug-ins
+        //name-name plug-in discribe of plug-in 
+        description-description of Plug-in
+        fileName-fileName of Plug-ins
+        //lenght-the no of mime type handle by the plug in
+
+        function hasplugin(name){
+            name=name.toLowerCase();
+            for(var i=0;i<navigator.plugins.length;i++){
+                if(navigator.plugins[i].name.toLocaleLowerCase().indexOf(name)>-1){
+                    return true;
+                }
+            }
+            return false;
+        }
+        alert(hasplugin("flashplayer"));
+
+    </script>
+</body>
+</html>

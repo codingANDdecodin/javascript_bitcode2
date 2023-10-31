@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+     
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li draggable="true" ondragstart="fun1(event)" data-marks="10"> red</li>
+        <li draggable="true" ondragstart="fun1(event)" data-marks="109"> blue</li>
+        <li draggable="true" ondragstart="fun1(event)" data-marks="13"> green</li>
+    </ul>
+
+    <!-- <div id="mydiv" style="height: 100px; width: 100px; margin: 10px; border: black 2px; ;" ondrop="fun2()"></div> -->
+       <div id="mydiv" style="height: 100px; width: 200px; margin: 30px; border: black solid 1px;" ondragover="overEvent(event)" ondrop="fun2(event)">
+
+       </div>
+    <script>
+        const fun1=(event)=>{
+            console.log(event.currentTarget.innerText)
+            event.dataTransfer.setData("text/plain",event.currentTarget.innerText);
+            event.dataTransfer.setData("text/data-marks",event.currentTarget.dataset.marks);
+            
+        }
+        
+        const overEvent=(event)=>{
+            event.preventDefault();
+        }
+
+        const fun2=(event)=>{
+
+            var data=event.dataTransfer.getData('text')
+            var m=event.dataTransfer.getData('text/data-marks')
+            document.getElementById('mydiv').innerHTML+="<li> "+data+"......"+m+"</li>"
+
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>my form </legend>
+            <label>
+                id:
+            </label>
+            <input type="text" id="id"/><br/><br/>
+            <label>
+                name:
+            </label>
+            <input type="text" id="name"><br/><br/>
+            <label>
+                surname:
+            </label>
+            <input type="text" id="surname"/><br/><br/>
+            <input type="button" onclick="myfun()" value="submit">
+        </fieldset>
+    </form>
+    <script>
+      
+       function myfun(){
+         var name =document.getElementById("name").value;
+         var exp=/p/g;
+            console.log(name.match(exp))
+        
+            
+       }
+       
+    </script>
+</body>
+</html>

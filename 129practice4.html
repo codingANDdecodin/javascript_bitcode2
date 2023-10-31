@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>character classes</title>
+</head>
+<body>
+    <script>
+        let regex=/\war/;  //\w is class it include one  any char,underscore,and number
+        regex=/\w+ar/;     //\w+ is class it include one or more than one any char,underscore,and number
+        regex=/\W+ar/;      //\W capttal w for non word charater like space and !@#$%^&
+
+        regex=/\d/;          //\d it serach any degit in string
+        regex=/\d+/;         // \d+ it search 1 or more number of degit
+        regex=/\D33/;           //\D seach one non degit symbol
+        regex=/\D+33/;       //\D+ it search one or more non degit symbool
+                const str="%%ar bhai kon aahe 9A qqqq33";
+
+
+
+        let result=regex.exec(str);
+        console.log(result);
+
+        if(regex.test(str)){
+            console.log(`string ${str} match with ${regex}`)
+        }else{
+            console.log(`string ${str} not match with ${regex}`)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form style="text-align: center;" id="myForm" action=" " onsubmit="">
+        <fieldset>
+            <legend>myForm</legend>
+
+        <label> name </label>
+            <input type="=text" id="tex" required /><br><br>
+      
+        <label>number</label>
+            <input type="number"  id="num" required/><br><br>
+        
+        <label for="1"> radio1</label>
+            <input id="1" type="radio" required name="yesno"/>
+       
+        <label for="2">  radio2  </label>
+            <input id="2" type="radio" name="yesno" required/><br><br>
+
+        <label for="2">  cheakbox1  </label>
+            <input id="c1" type="checkbox" checked name="c1" /><br><br>
+        <label for="2">  cheakbox2  </label>
+            <input id="c2" type="checkbox" checked name="c1" /><br><br>
+        <label for="2">  cheakbox3  </label>
+            <input id="c3" type="checkbox" checked name="c1"/><br><br>
+    
+        <input type="button" value="submit"  onclick="cheakHandler()"></input ><br><br>
+       
+
+        <label>
+            college:
+        </label>
+        <select id="sel">
+            <optgroup label="A grade">
+                <option value="none">none</option>
+               <option value="dy">dy</option>               
+               <option value="dy ambhi">dy ambhi</option>               
+            </optgroup>
+            <optgroup label="B grade">
+                <option value="symbioses">symbiosis</option>
+                <option value="morden">morden</option>
+            </optgroup>
+        </select>
+    </fieldset>
+    </form>
+    <output id="out"></output>
+    <script>
+        var sel=document.getElementById("sel")
+        console.log(sel.value)
+        var cheakHandler=()=>{
+        var a =document.getElementsByName("c1")
+        var out =document.getElementById("out")
+        
+        if(a[0].checked){
+            // var data=document.createElement("hiiiiii")
+            var data ="hiiiiii"
+            console.log("a is clicked"+ "sel value is "+ sel.value)
+         out.innerHTML= out.innerText+ document.getElementById("tex").value+" " + document.getElementById("num").value;
+        }else if(a[1].checked ){
+            console.log("b is cliked")
+         }else
+         {
+            console.log(a)
+         }
+        }
+    </script>
+</body>
+</html>

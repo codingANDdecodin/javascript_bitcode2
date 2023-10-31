@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ajit=/hello ajit 123/g;        //g mens global g is a flag
+        var ajit2=/Hello ajit 123/i;         // i mens case insencetive default=sencetive 
+        console.log(ajit);
+        // console.log(typeof(ajit));
+        // console.log(typeof(ajit.source))    //sourse return us string that contain data of our expression
+
+        var str="hii who are u i am hello ajit 123 hello ajit 123";
+        //method of reguler expression
+
+        // //function to find match of our data
+        // //exec()     it will return null if no data found
+        
+        console.log(result);
+        var result=ajit.exec(str);
+        console.log(result);
+        var result=ajit.exec(str);
+        console.log(result);
+        // var result2=ajit2.exec(str);
+        // console.log(result2);
+         
+
+        // //function ehich retrn true if data match other wise return false similler to exec but it can't return data
+        // //test()
+        // let result=ajit.test(str);
+        // console.log(result);
+
+        // if(result){
+
+        //     console.log(result2.index);
+        //     console.log(result2.input);
+        //     console.log(result2.length);
+        // }
+
+        // //function which return array of match data
+        //match()
+        var result3=str.match(ajit);       //we apply this method on string not our reguler expression
+        console.log(result3);
+
+        
+    </script>
+</body>
+</html>

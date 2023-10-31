@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>charset</title>
+</head>
+<body>
+    <script>
+        //......................charset..................................
+
+    //    // const regex=/a[abc]it/ it match only when given charater match
+    //     let regex=/a[a-z]it/  //it is for a to z
+    //     // regex=/a[^a-z]it/  //in charet set ^ symboll represent not //in this example it re present not start with a to z
+         
+    //     // regex=/a[^a-z]it[0-9]/;
+    //     regex=/a[^a-z]it[0-9][^0-9]/;
+    //     const str="aJit2a bhai";
+
+    //     let result=regex.exec(str);
+    //     console.log(result);
+
+    //     if(regex.test(str)){
+    //         console.log(`string ${str} match with ${regex}`)
+    //     }else{
+    //         console.log(`string ${str} not match with ${regex}`)
+    //     }
+
+//..............................quantifires...........................
+// let regex=/aji{2}t/;   //"i" have to repet al list 2 times
+//  regex=/aji{0,2}t/;       //i have to repet between 0 to 2 times
+
+// const str="ajt bhai hiii";    //true zal karen "i " ha zero vela aalay
+
+//     let result=regex.exec(str);
+//         console.log(result);
+
+//         if(regex.test(str)){
+//             console.log(`string ${str} match with ${regex}`)
+//         }else{
+//             console.log(`string ${str} not match with ${regex}`)
+//         }
+//..........................grouping...................................
+// let regex=/(aji){2}/   //aji 2 times repet zala pahije;
+// regex=/(aji){2}([0-9]r){3}/   //0 to 9 mdile number ani "r" 3 times repet zale pahjr
+// const str="ajiaji1r2r3r BHAI";
+
+// let result=regex.exec(str);
+//         console.log(result);
+
+//         if(regex.test(str)){
+//             console.log(`string ${str} match with ${regex}`)
+//         }else{
+//             console.log(`string ${str} not match with ${regex}`)
+//         }
+    </script>
+</body>
+</html>

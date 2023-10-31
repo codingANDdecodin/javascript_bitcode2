@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let ajit=/regu_exp_tut/;
+    ajit=/^aji/;                     //this return true if start with aji(^=start with)
+    ajit=/tut$/;                      //this will return true if string ends with tut ontherwise false($=ends with)
+    ajit=/regu.exp/;                       //(.mens dot chya jagi konty tri 1 character asel)return true if exp is present instring
+    ajit=/a*it/;                       //(* mens star chya jagi kontehe charater aasu shakt kiva kahi nasel tri chalel)
+    ajit=/regu?_exp_?/;                 //(? mens optional) chatcter befor ? is optional
+    ajit=/a\*it/;                        //(\* mens * symboll present or not)if string contain "a*it" then return false
+     
+    let str="this is ait bhogade learning regu_exp_tut";
+
+    // var result1=ajit.exec(str);
+    // console.log(result1);
+
+    if(ajit.test(str)){
+        console.log(`string ${str} 👍matches with ${ajit}`);
+    }
+    else{
+        console.log(`string ${str}  not matches with ${ajit}`)
+    }
+   </script> 
+</body>
+</html>
